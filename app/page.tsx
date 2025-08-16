@@ -88,24 +88,30 @@ export default function Page() {
 
                         {/* Rows */}
                         <div className="h-[400px] md:h-[400px] overflow-auto">
-                            {pagedPlayers.map((p) => {
-                                const playerKey = (p as any).operatorSlatePlayerId ?? `${p.operatorPlayerId}-${p.operatorSalary}`;
-                                const selectedPlayerKey = selectedPlayer ? ((selectedPlayer as any).operatorSlatePlayerId ?? `${selectedPlayer.operatorPlayerId}-${selectedPlayer.operatorSalary}`) : null;
-                                const selected = playerKey === selectedPlayerKey;
-                                return (
-                                    <div
-                                        key={playerKey}
-                                        onClick={() => setSelectedPlayer(p)}
-                                        className={`w-full h-[50px] px-4 md:px-8 flex items-center justify-between cursor-pointer ${selected ? 'bg-[#807B0F]' : ''}`}
-                                    >
-                                        <div className="w-[200px] text-white text-base md:text-2xl">{p.operatorPlayerName || 'Player'}</div>
-                                        <div className="w-16 text-white text-base md:text-2xl text-center">{p.teamAbbreviation ?? (p as any).team ?? '—'}</div>
-                                        <div className="w-24 text-white text-base md:text-2xl text-center">{p.operatorPosition ?? '—'}</div>
-                                        <div className="w-24 text-white text-base md:text-2xl text-right">${p.operatorSalary?.toLocaleString?.() ?? '—'}</div>
-                                        <div className="w-[64px] text-white text-base md:text-2xl text-right">{pointsFor(p)}</div>
-                                    </div>
-                                )
-                            })}
+                            {pagedPlayers.length > 0 ? (
+                                pagedPlayers.map((p) => {
+                                    const playerKey = (p as any).operatorSlatePlayerId ?? `${p.operatorPlayerId}-${p.operatorSalary}`
+                                    const selectedPlayerKey = selectedPlayer ? ((selectedPlayer as any).operatorSlatePlayerId ?? `${selectedPlayer.operatorPlayerId}-${selectedPlayer.operatorSalary}`) : null
+                                    const selected = playerKey === selectedPlayerKey
+                                    return (
+                                        <div
+                                            key={playerKey}
+                                            onClick={() => setSelectedPlayer(p)}
+                                            className={`w-full h-[50px] px-4 md:px-8 flex items-center justify-between cursor-pointer ${selected ? 'bg-[#807B0F]' : ''}`}
+                                        >
+                                            <div className="w-[200px] text-white text-base md:text-2xl">{p.operatorPlayerName || 'Player'}</div>
+                                            <div className="w-16 text-white text-base md:text-2xl text-center">{p.teamAbbreviation ?? (p as any).team ?? '—'}</div>
+                                            <div className="w-24 text-white text-base md:text-2xl text-center">{p.operatorPosition ?? '—'}</div>
+                                            <div className="w-24 text-white text-base md:text-2xl text-right">${p.operatorSalary?.toLocaleString?.() ?? '—'}</div>
+                                            <div className="w-[64px] text-white text-base md:text-2xl text-right">{pointsFor(p)}</div>
+                                        </div>
+                                    )
+                                })
+                            ) : (
+                                <div className="w-full h-full flex items-center justify-center text-white text-2xl">
+                                    No players available.
+                                </div>
+                            )}
                         </div>
                     </div>
 
@@ -132,7 +138,7 @@ export default function Page() {
                 </div>
 
                 {/* Player Card */}
-                <div className="h-[512px] w-full md:w-[250px] lg:w-[25%] rounded-lg bg-[#1D1D1D] flex flex-col items-center">
+                <div className="h-[512px] w-full md:w-[250px] lg:w-[30%] rounded-lg bg-[#1D1D1D] flex flex-col items-center">
                     <PlayerCard player={selectedPlayer} />
                 </div>
             </section>
