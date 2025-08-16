@@ -96,7 +96,16 @@ export default function Page() {
                                     return (
                                         <div
                                             key={playerKey}
+                                            role="button"
+                                            tabIndex={0}
+                                            aria-pressed={selected}
                                             onClick={() => setSelectedPlayer(p)}
+                                            onKeyDown={(e) => {
+                                                if (e.key === 'Enter' || e.key === ' ') {
+                                                    e.preventDefault()
+                                                    setSelectedPlayer(p)
+                                                }
+                                            }}
                                             className={`w-full h-[50px] px-4 md:px-8 flex items-center justify-between cursor-pointer ${selected ? 'bg-[#807B0F]' : ''}`}
                                         >
                                             <div className="w-[200px] text-white text-base md:text-2xl">{p.operatorPlayerName || 'Player'}</div>
