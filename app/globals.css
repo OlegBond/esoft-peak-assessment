@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+:root {
+  --brand: 42 87% 56%;
+}
+
+.container {
+  max-width: 1200px;
+}
