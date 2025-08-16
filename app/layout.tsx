@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </div>
         </header>
-        <div className="px-6 md:px-8 pt-4 pb-6 md:pb-8 flex-1 flex flex-col">{children}</div>
+        <div className="px-6 md:px-8 pb-6 md:pb-8 flex-1 flex flex-col">{children}</div>
       </body>
     </html>
   )
