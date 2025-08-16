@@ -53,7 +53,7 @@ export function Pagination({ page, pageSize, total, onPageChange, onPageSizeChan
             type="button"
             aria-label={ariaLabel}
             onClick={onClick}
-            className="relative inline-flex items-center gap-2 md:gap-4 rounded-lg bg-[#1D1D1D] px-3 py-2 md:px-4 md:py-3 justify-center cursor-pointer h-10 md:h-12"
+            className="relative inline-flex items-center gap-2 md:gap-4 rounded-lg bg-[#1D1D1D] px-3 py-2 md:px-4 md:py-3 justify-center cursor-pointer h-8 md:h-10"
         >
             {children}
         </button>
