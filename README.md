@@ -2,6 +2,10 @@
 
 This is a single-page application that loads static data from `data.json` to explore DFS slates. It fulfills the provided assessment requirements: operator selection, dependent game type and slate name population, player list with selection, working pagination, and responsive (desktop) layout.
 
+## Live Demo
+
+The production version is available for review at: [https://esoft-peak-assessment.vercel.app/](https://esoft-peak-assessment.vercel.app/)
+
 ## Tech Stack
 - Next.js 15 (App Router)
 - TypeScript
