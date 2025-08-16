@@ -42,8 +42,8 @@ export default function Page() {
     return (
         <main className="flex flex-col flex-1">
             {/* Top Section */}
-            <section className="my-auto mx-auto w-full md:w-fit bg-[#2F2F2F] rounded-lg flex flex-col md:flex-row items-center justify-center gap-4 p-8 border border-[#2F2F2F]">
-                <div className="w-full md:w-[245px]">
+            <section className="my-auto mx-auto w-full md:w-full lg:w-fit bg-[#2F2F2F] rounded-lg flex flex-col md:flex-row items-center justify-center gap-4 p-8 border border-[#2F2F2F]">
+                <div className="w-full md:w-[200px] lg:w-[245px]">
                     <Select
                         label="Operator"
                         placeholder="Select Operator"
@@ -52,7 +52,7 @@ export default function Page() {
                         onChange={(v) => setOperator(v || undefined)}
                     />
                 </div>
-                <div className="w-full md:w-[270px]">
+                <div className="w-full md:w-[220px] lg:w-[270px]">
                     <Select
                         label="Game Type"
                         placeholder="Select Game Type"
@@ -61,7 +61,7 @@ export default function Page() {
                         onChange={(v) => setGameType(v || undefined)}
                     />
                 </div>
-                <div className="w-full md:w-[270px]">
+                <div className="w-full md:w-[220px] lg:w-[270px]">
                     <Select
                         label="Slate Name"
                         placeholder="Select Slate Name"
@@ -132,7 +132,7 @@ export default function Page() {
                 </div>
 
                 {/* Player Card */}
-                <div className="h-[512px] w-full md:w-[400px] rounded-lg bg-[#1D1D1D] flex flex-col items-center">
+                <div className="h-[512px] w-full md:w-[250px] lg:w-[25%] rounded-lg bg-[#1D1D1D] flex flex-col items-center">
                     <PlayerCard player={selectedPlayer} />
                 </div>
             </section>

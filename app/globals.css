@@ -4,6 +4,8 @@
     --brand: 42 87% 56%;
 }
 
+
+/*md:text-[15px] lg:text-[20px]*/
 /* Basic responsive container for desktop layouts */
 .container {
     width: 100%;
@@ -19,5 +21,4 @@
     }
 }
 
-html { font-size: 14px; }
 body { font-weight: 300; }

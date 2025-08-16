@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className=" md:text-[12px] lg:text-[15px]" >
       <body className="min-h-screen bg-neutral-900 text-gray-100 flex flex-col">
         {/* Full-width top toolbar */}
         <header className="w-full bg-neutral-950 border-b border-neutral-800" >

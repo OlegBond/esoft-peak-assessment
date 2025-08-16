@@ -31,7 +31,7 @@ export function Select({ label, value, options, placeholder = 'Select…', onCha
                         </option>
                     ))}
                 </select>
-                <div className="pointer-events-none absolute inset-y-0 right-8 flex items-center">
+                <div className="pointer-events-none absolute inset-y-0 right-8 md:right-3 flex items-center">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-white">
                         <path d="M6 9l6 6 6-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>

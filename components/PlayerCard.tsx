@@ -31,6 +31,7 @@ export function PlayerCard({ player }: { player: Player | null }) {
                     alt={title}
                     fill
                     priority
+                    className="md:object-cover xl:object-contain"
                 />
             </div>
             <div className="w-full flex-1 bg-[#2F2F2F] rounded-t-lg flex flex-col items-center justify-start">

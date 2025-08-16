@@ -95,7 +95,7 @@ export function Pagination({ page, pageSize, total, onPageChange, onPageSizeChan
     )
 
     return (
-        <div className="flex w-full flex-wrap md:flex-nowrap items-center justify-center md:justify-between gap-y-3 gap-x-6 text-base md:text-2xl md:leading-[29px] text-white">
+        <div className="flex w-full flex-wrap md:flex-nowrap items-center justify-center md:justify-between gap-y-3 gap-x-6 text-base md:text-[15px] lg:text-2xl md:leading-[29px] text-white">
             <div className="flex items-center gap-x-2 md:gap-x-4 relative">
                 <span>Page</span>
                 <div className="relative" ref={pageRef}>
