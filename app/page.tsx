@@ -42,8 +42,8 @@ export default function Page() {
     return (
         <main className="flex flex-col flex-1">
             {/* Top Section */}
-            <section className="my-auto mx-auto w-full md:w-fit bg-white/10 rounded-lg flex flex-col md:flex-row items-center justify-center gap-4 p-4">
-                <div className="w-full md:w-[283px]">
+            <section className="my-auto mx-auto w-full md:w-fit bg-[#2F2F2F] rounded-lg flex flex-col md:flex-row items-center justify-center gap-4 p-8 border border-[#2F2F2F]">
+                <div className="w-full md:w-[245px]">
                     <Select
                         label="Operator"
                         placeholder="Select Operator"
@@ -52,7 +52,7 @@ export default function Page() {
                         onChange={(v) => setOperator(v || undefined)}
                     />
                 </div>
-                <div className="w-full md:w-[311px]">
+                <div className="w-full md:w-[270px]">
                     <Select
                         label="Game Type"
                         placeholder="Select Game Type"
@@ -61,7 +61,7 @@ export default function Page() {
                         onChange={(v) => setGameType(v || undefined)}
                     />
                 </div>
-                <div className="w-full md:w-[313px]">
+                <div className="w-full md:w-[270px]">
                     <Select
                         label="Slate Name"
                         placeholder="Select Slate Name"
