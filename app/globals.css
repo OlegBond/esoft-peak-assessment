@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+:root {
+    --brand: 42 87% 56%;
+}
+
+
+/*md:text-[15px] lg:text-[20px]*/
+/* Basic responsive container for desktop layouts */
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 1440px; /* comfortable desktop width */
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+body { font-weight: 300; }
